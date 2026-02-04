@@ -1,21 +1,20 @@
-let input = prompt("Inserire Numero del Prodotto \n 1 Acqua \n 2 Coca-cola \n 3 Birra");
+let input;
 
-if (input == 1){
-    console.log("E' stata selezionata l'Acqua");
-} else if (input == 2){
-    console.log("E' stata selezionata la Coca-cola");
-} else if (input == 3){
-    console.log("E' stata selezionata la Birra");
-} else {
-    while (input != 1 && input != 2 && input != 3) {
-        input = prompt("Scelta non valida. Inserire Numero del Prodotto \n 1 Acqua \n 2 Coca-cola \n 3 Birra");
-    }
-    // Dopo il while, mostra la scelta valida
-    if (input == 1){
-        console.log("E' stata selezionata l'Acqua");
-    } else if (input == 2){
-        console.log("E' stata selezionata la Coca-cola");
-    } else if (input == 3){
-        console.log("E' stata selezionata la Birra");
-    }
-}
+do{
+  input = Number(prompt("Inserire Numero del Prodotto  1 Acqua 2 Coca-cola 3 Birra"));
+
+  switch(input) {
+    case 1:
+      console.log("è stata selezionata l'Acqua");
+      break;
+  case 2:
+      console.log("è stata selezionata la Coca-cola");
+      break;
+  case 3:
+      console.log("è stata selezionata la Birra");
+      break;
+  default: 
+      console.log("Scelta non valida, riprova")
+
+  }
+}while(input < 1 || scelta > 3)
